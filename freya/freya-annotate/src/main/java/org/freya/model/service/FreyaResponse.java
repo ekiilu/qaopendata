@@ -1,0 +1,117 @@
+package org.freya.model.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import org.freya.model.ui.Annotation;
+import org.freya.model.Question;
+import org.freya.model.SemanticConcept;
+
+@XmlRootElement
+public class FreyaResponse {
+    String repositoryId;
+    String repositoryUrl;
+    String sparqlQuery;
+    String preciseSparql;
+    public String getPreciseSparql() {
+        return preciseSparql;
+    }
+
+    public void setPreciseSparql(String preciseSparql) {
+        this.preciseSparql = preciseSparql;
+    }
+
+    Object textResponse;
+    ArrayList clarifications;
+    List<List<HashMap>> table;
+    List<Object> refinementNodes;
+    
+    public List<Object> getRefinementNodes() {
+        return refinementNodes;
+    }
+
+    public void setRefinementNodes(List<Object> refinementNodes) {
+        this.refinementNodes = refinementNodes;
+    }
+
+    public ArrayList getClarifications() {
+        return clarifications;
+    }
+
+    public void setClarifications(ArrayList clarifications) {
+        this.clarifications = clarifications;
+    }
+
+    public List<List<HashMap>> getTable() {
+        return table;
+    }
+
+    public void setTable(List<List<HashMap>> table) {
+        this.table = table;
+    }
+
+    public ArrayList<Object> getGraph() {
+        return graph;
+    }
+
+    public void setGraph(ArrayList<Object> graph) {
+        this.graph = graph;
+    }
+
+    ArrayList<Object> graph;
+    ArrayList<Annotation> annotations = new ArrayList<Annotation>();
+
+    public ArrayList<Annotation> getAnnotations() {
+        return annotations;
+    }
+
+    public void setAnnotations(ArrayList<Annotation> annotations) {
+        this.annotations = annotations;
+    }
+
+    List<List<SemanticConcept>> semanticConcepts;
+
+
+    public List<List<SemanticConcept>> getSemanticConcepts() {
+        return semanticConcepts;
+    }
+
+    public void setSemanticConcepts(List<List<SemanticConcept>> semanticConcepts) {
+        this.semanticConcepts = semanticConcepts;
+    }
+
+    public Object getTextResponse() {
+        return textResponse;
+    }
+
+    public void setTextResponse(Object textResponse) {
+        this.textResponse = textResponse;
+    }
+
+    public String getRepositoryId() {
+        return repositoryId;
+    }
+
+    public void setRepositoryId(String repositoryId) {
+        this.repositoryId = repositoryId;
+    }
+
+    public String getRepositoryUrl() {
+        return repositoryUrl;
+    }
+
+    public void setRepositoryUrl(String repositoryUrl) {
+        this.repositoryUrl = repositoryUrl;
+    }
+
+    public String getSparqlQuery() {
+        return sparqlQuery;
+    }
+
+    public void setSparqlQuery(String sparqlQuery) {
+        this.sparqlQuery = sparqlQuery;
+    }
+}

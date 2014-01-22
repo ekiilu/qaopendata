@@ -1,0 +1,847 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://opendata.go.ke/demographics"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://opendata.go.ke/demographics">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">opendata version 1.0.0.0</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Demographics data for Kenya Open data</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#County"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#borders"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCapital"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCapitalOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isCityOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cityPopulation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#countyPopulation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OlKalou"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#athiRiver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#baringo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bomet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bungoma"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#busia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#chuka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eldoret"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#elgeyoMarakwet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#embu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#garissa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hola"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#homabay"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#isiolo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#iten"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kabarnet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kajiado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kakamega"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kangundo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kapenguria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kapsabet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#karuri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kericho"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kerugoya"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kiambu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kikuyu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kilifi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kimilili"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kirinyaga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kisii"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kisumu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kitale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kitui"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kwale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#laikipia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lamu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lodwar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#machakos"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#makueni"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#malindi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mandera"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maralal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#marsabit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#meru"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#migori"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mombasa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mumias"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#muranga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nairobi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#naivasha"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nakuru"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nandi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#narok"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nyamira"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nyandarua"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nyeri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ruiru"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rumuruti"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#samburu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#siaya"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#taitaTaveta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tanaRiver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tharaka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#thika"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#transNzoia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#turkana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#uasinGishu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vihiga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#voi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#wajir"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#westPokot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#wote"/>
+    </Declaration>
+    <DisjointClasses>
+        <Class IRI="#City"/>
+        <Class IRI="#County"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#OlKalou"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#athiRiver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#baringo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#bomet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#bomet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#bungoma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#bungoma"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#busia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#busia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#chuka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#eldoret"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#elgeyoMarakwet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#embu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#embu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#garissa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#garissa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#hola"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#homabay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#homabay"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#isiolo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#isiolo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#iten"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kabarnet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kajiado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kajiado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kakamega"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kakamega"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kangundo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kapenguria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kapsabet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#karuri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kericho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kericho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kerugoya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kiambu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kikuyu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kilifi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kilifi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kimilili"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kirinyaga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kisii"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kisii"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kisumu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kisumu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kitale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kitui"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kitui"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#kwale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#kwale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#laikipia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#lamu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#lamu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#lodwar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#machakos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#machakos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#makueni"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#malindi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#mandera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#mandera"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#maralal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#marsabit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#marsabit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#meru"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#meru"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#migori"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#migori"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#mombasa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#mombasa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#mumias"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#muranga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#muranga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#nairobi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#nairobi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#naivasha"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#nakuru"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#nakuru"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#nandi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#narok"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#narok"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#nyamira"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#nyamira"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#nyandarua"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#nyeri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#nyeri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#ruiru"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#rumuruti"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#samburu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#siaya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#siaya"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#taitaTaveta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#tanaRiver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#tharaka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#thika"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#transNzoia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#turkana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#uasinGishu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#vihiga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#vihiga"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#voi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#wajir"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#wajir"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#County"/>
+        <NamedIndividual IRI="#westPokot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#wote"/>
+    </ClassAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#baringo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">554,622</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#bungoma"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1,375,063</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#garissa"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">623,060</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#homabay"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">963,794</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#isiolo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">143,294</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#kakamega"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1,660,651</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#kirinyaga"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">528,054</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#kitui"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1,012,709</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#lamu"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">101,539</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#machakos"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1,098,584</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#mandera"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1,025,756</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#meru"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1,356,301</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#migori"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">917,170</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#muranga"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">942,581	</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#nakuru"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1,603,325</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#siaya"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">842,304</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#countyPopulation"/>
+        <NamedIndividual IRI="#wajir"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">661,941</Literal>
+    </DataPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCapital"/>
+        <ObjectProperty IRI="#isCapitalOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasCity"/>
+        <ObjectProperty IRI="#isCityOf"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#borders"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#borders"/>
+        <Class IRI="#County"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCapital"/>
+        <Class IRI="#County"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCity"/>
+        <Class IRI="#County"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCapitalOf"/>
+        <Class IRI="#City"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isCityOf"/>
+        <Class IRI="#City"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#borders"/>
+        <Class IRI="#County"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCapital"/>
+        <Class IRI="#City"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCity"/>
+        <Class IRI="#City"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCapitalOf"/>
+        <Class IRI="#County"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isCityOf"/>
+        <Class IRI="#County"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cityPopulation"/>
+        <Class IRI="#City"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#countyPopulation"/>
+        <Class IRI="#County"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#cityPopulation"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#countyPopulation"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

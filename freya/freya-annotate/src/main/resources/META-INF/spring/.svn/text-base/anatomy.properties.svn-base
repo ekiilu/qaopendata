@@ -1,0 +1,2 @@
+#org.freya.rdf.repository.url=http://localhost:8080/openrdf-sesame
+#org.freya.rdf.repository.id=anatomy-lite
